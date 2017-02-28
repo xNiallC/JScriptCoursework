@@ -33,7 +33,7 @@
 
 
         function validateForm() {
-            var number = document.forms["form"]["cardNumber"].value;
+            var number = parseInt(document.forms["form"]["cardNumber"].value);
             var expMonth = parseInt(document.forms["form"]["expirationMonth"].value);
             var expYear = parseInt(document.forms["form"]["expirationYear"].value);
             var name = document.forms["form"]["cardName"].value;
@@ -47,7 +47,7 @@
                 count--;
             }
 
-            if (number.length != 16) {
+            if (number.length != 16 || isNaN(number)) {
                 editText('Card number must be 16-digits long.\n', 'cN');
             }
             if (!(1 <= expMonth <= 12) || isNaN(expMonth)) {
