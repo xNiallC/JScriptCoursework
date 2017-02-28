@@ -11,6 +11,8 @@
         // Expiration Date, equal or greater than 2017, not empty, month integer between 1-12
         // Cardholder's name, not empty
         // Security code, 3 digit number
+        var count = 0;
+
         function initialise(inputText, nodeId) {
             var p = document.createElement("p");
             var node = document.getElementById(nodeId);
@@ -36,6 +38,15 @@
             var expYear = parseInt(document.forms["form"]["expirationYear"].value);
             var name = document.forms["form"]["cardName"].value;
             var code = document.forms["form"]["cvc"].value;
+            if (count == 1) {
+                editText('', 'cN');
+                editText('', 'eM');
+                editText('', 'eY');
+                editText('', 'cN2');
+                editText('', 'secCode');
+                count--;
+            }
+
             if (number.length != 16) {
                 editText('Card number must be 16-digits long.\n', 'cN');
             }
@@ -48,9 +59,10 @@
             if (name == "") {
                 editText('Name field must be filled out.', 'cN2');
             }
-            if (code.length != 3) {
-                editText('CVC must be 3 digits long.\n', 'secCode');
+            if (code.length != 3 || isNaN(parseInt(code))) {
+                editText('CVC must be a 3 digit long number.\n', 'secCode');
             }
+            count++;
             return false;
         }
 
