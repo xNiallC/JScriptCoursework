@@ -56,7 +56,7 @@
             if (expYear < 2017 || isNaN(expMonth)) {
                 editText('Year must be a 4-digit year, equal or greater than 17.\n', 'eY');
             }
-            if (name == "") {
+            if (name == "" || name == "Name on Card") {
                 editText('Name field must be filled out.', 'cN2');
             }
             if (code.length != 3 || isNaN(parseInt(code))) {
