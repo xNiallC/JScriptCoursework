@@ -34,8 +34,8 @@
 
         function validateForm() {
             var number = document.forms["form"]["cardNumber"].value;
-            var expMonth = parseInt(document.forms["form"]["expirationMonth"].value);
-            var expYear = parseInt(document.forms["form"]["expirationYear"].value);
+            var expMonth = document.forms["form"]["expirationMonth"].value;
+            var expYear = document.forms["form"]["expirationYear"].value;
             var name = document.forms["form"]["cardName"].value;
             var code = document.forms["form"]["cvc"].value;
             if (count == 1) {
@@ -50,14 +50,14 @@
             if (number.length != 16 || isNaN(parseInt(number))) {
                 editText('Card number must be 16-digits long.\n', 'cN');
             }
-            if (!(1 <= expMonth <= 12) || isNaN(expMonth)) {
+            if (parseInt(!(1 <= expMonth <= 12)) || parseInt(isNaN(expMonth)) || expMonth.length > 2) {
                 editText('Month must be a number between 1 and 12.\n', 'eM');
             }
-            if (expYear < 2017 || isNaN(expMonth)) {
+            if (parseInt(expYear < 2017) || parseInt(isNaN(expYear)) || expYear.length != 4) {
                 editText('Year must be a 4-digit year, equal or greater than 17.\n', 'eY');
             }
             if (name == "" || name == "Name on Card") {
-                editText('Name field must be filled out.', 'cN2');
+                editText('Name field must be correctly filled out.', 'cN2');
             }
             if (code.length != 3 || isNaN(parseInt(code))) {
                 editText('CVC must be a 3 digit long number.\n', 'secCode');

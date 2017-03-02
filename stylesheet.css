@@ -5,12 +5,16 @@
 body {
     font-family: "Raleway", sans-serif;
     margin-bottom: 40px;
+    background-color: #f2f2f2;
 }
 form {
+	border: 3px solid #d3d3d3;
+	border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
     padding: 10px 10px 10px 10px;
+    background-color: #ffffff;
 }
 .enterDetails {
     font-weight: 600;
@@ -19,6 +23,7 @@ form {
     margin-right: auto;
     width: 20%;
     text-align: center;
+    margin-bottom: 10px;
 }
 .formElement {
     padding-top: 15px;
@@ -28,7 +33,7 @@ form {
     position: relative;
     float: right;
 }
-.helpArea {
+#helpArea {
     height: 150px;
     width: auto;
     text-align: center;
@@ -41,6 +46,12 @@ form {
     height: auto;
     max-height: 300px;
     overflow: hidden;
+}
+#submit {
+	width: 20%;
+	position: relative;
+	left: 40%;
+	margin-bottom: 10px;
 }
 nav {
     background-color: #393939;
