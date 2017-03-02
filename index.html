@@ -50,7 +50,7 @@
             if (number.length != 16 || isNaN(parseInt(number))) {
                 editText('Card number must be 16-digits long.\n', 'cN');
             }
-            if (parseInt(!(1 <= expMonth <= 12)) || parseInt(isNaN(expMonth)) || expMonth.length > 2) {
+            if (parseInt(!(1 <= expMonth <= 12)) || parseInt(isNaN(expMonth)) || expMonth.length > 2 || expMonth.length == 0) {
                 editText('Month must be a number between 1 and 12.\n', 'eM');
             }
             if (parseInt(expYear < 2017) || parseInt(isNaN(expYear)) || expYear.length != 4) {
