@@ -12,6 +12,14 @@ form {
     width: 40%;
     padding: 10px 10px 10px 10px;
 }
+.enterDetails {
+    font-weight: 600;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    text-align: center;
+}
 .formElement {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -20,11 +28,9 @@ form {
     position: relative;
     float: right;
 }
-.submit {
-    align-self: center;
-}
-p > .helpArea {
-    position: relative;
+.helpArea {
+    height: 150px;
+    width: auto;
     text-align: center;
 }
 .topImage {

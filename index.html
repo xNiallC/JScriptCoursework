@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Payment Form</title>
+    <title>CurtisGames.co.uk - Payment Form</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
     <script type="text/javascript">
@@ -84,6 +84,10 @@
         <img src="img/mario.jpg" class="topImage"/>
     </header>
 
+    <p class="enterDetails">
+        Please Enter Card Details:
+    </p>
+
     <form id="form" name="form" onSubmit="return validateForm()">
         <div class="formElement">
         <input id="cardNumber" name="cardNumber" type="text" placeholder="Card Number" onFocus="editText('16-digit number on front of card.', 'helpArea')" onBlur="editText(' ', 'helpArea')">
@@ -110,7 +114,7 @@
         <p id="secCode"></p>
         <br />
         </div>
-        <p id="helpArea"></p>
+        <p id="helpArea" style="height: 15px;"></p>
         <br />
         <input id="submit" type="submit">
         <br />
